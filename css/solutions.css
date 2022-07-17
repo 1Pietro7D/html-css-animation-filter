@@ -48,14 +48,13 @@
   border-radius: 15px;
 }
 
-
 .ex-8-img {
   transition: 2s;
 }
 
 #esp1:hover {
   display: flex;
-  justify-content: center;  /* NB.center essendo un valore "non numerico" la durata d'esecuzione sarà immediata, avessi usato uno spostamento con position, perciò con valori numerici, allora avrebbe rispettato la proprietà duraction di transition */  */
+  justify-content: center; /* NB.center essendo un valore "non numerico" la durata d'esecuzione sarà immediata, avessi usato uno spostamento con position, perciò con valori numerici, allora avrebbe rispettato la proprietà duraction di transition */
 }
 /* NB. se intendi spostare un oggetto con absolute devi dare una grandezza fissa al contenitore oltre che renderlo relativo */
 
@@ -64,12 +63,11 @@
   border-radius: 50%;
 }
 
-
 .ex-9-img {
   transition: 2s;
 }
 .ex-9-img:hover {
-  filter: invert(.5) sepia(1); /* invert .5 equivale a grey */
+  filter: invert(0.5) sepia(1); /* invert .5 equivale a grey */
   /* il fatto di mettere sepia dopo invert è DIFFERENTE dal metterlo prima, come già dimostrano img7 e 8 */
   /* il filtro BLUR sembra non essere compatibile con gli altri filtri*/
   transform: scale(1.2);
@@ -81,9 +79,8 @@
 }
 @keyframes mymove {
   0% {
-   transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-
 }
 
 /*
@@ -104,16 +101,83 @@
 }
 @keyframes mymove2 {
   0% {
-   transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   75% {
     transform: rotate(270deg);
   }
-  100%{
-   transform: rotate(0deg);
+  100% {
+    transform: rotate(0deg);
   }
 }
 
 /* NB. analizzato il css di ex12/ex13-top/botton-white, sono div 60px x 10%, che partono rispettivamente centrati in altezza nei bordi orrizzontali a 10px dagli angoli opposti */
 
+.ex-12-top-white {
+  animation: swing 2s linear infinite alternate;
+}
+.ex-12-bottom-white {
+  animation: swing 2s linear infinite alternate-reverse;
+}
 
+@keyframes swing {
+  0% {
+    left: 10%;
+    transform: translateX(0);
+  }
+  100% {
+    left: 90%;
+    transform: translateX(-100%);
+  }
+}
+
+.ex-13-top-white {
+  animation: circle 4s linear infinite;
+}
+
+@keyframes circle {
+  0% {
+    left: -20px;
+  }
+  36% {
+    left: calc(200px - 30px);
+    top: -10px;
+  }
+  50% {
+    top: calc(70px - 20px);
+    left: 170px;
+  }
+  86% {
+    top: 50px;
+    left: -20px;
+  }
+  100% {
+    top: -10px;
+    left: -20px;
+  }
+}
+
+.ex-13-bottom-white {
+  animation: circle2 4s linear infinite;
+}
+@keyframes circle2 {
+  0% {
+    right: -20px;
+  }
+  36% {
+    right: calc(200px - 30px);
+    bottom: -10px;
+  }
+  50% {
+    bottom: calc(70px - 20px);
+    right: 170px;
+  }
+  86% {
+    bottom: 50px;
+    right: -20px;
+  }
+  100% {
+    bottom: -10px;
+    right: -20px;
+  }
+}
