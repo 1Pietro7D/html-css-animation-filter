@@ -1,0 +1,119 @@
+.ex-1-square {
+  transition: 5s;
+}
+.ex-1-square:hover {
+  background-color: red;
+}
+
+.ex-2-square {
+  transition: 5s;
+}
+.ex-2-square:active {
+  width: 100%;
+}
+
+.ex-3-square {
+  transition: 5s;
+}
+.ex-3-square:hover {
+  border-radius: 50%;
+}
+.ex-4-square {
+  transition: 5s;
+}
+.ex-4-square:hover {
+  background-color: inherit;
+}
+
+.ex-5-square {
+  transition: 2s;
+}
+.ex-5-square:hover {
+  transform: scale(1.2);
+}
+.ex-5-square:active {
+  transform: scale(0.3);
+}
+
+.ex-6-img:hover {
+  filter: grayscale(1);
+}
+
+.ex-7-img {
+  transition: 2s;
+}
+.ex-7-img:hover {
+  filter: sepia(1) grayscale(1);
+  transform: scale(1.2);
+  border-radius: 15px;
+}
+
+
+.ex-8-img {
+  transition: 2s;
+}
+
+#esp1:hover {
+  display: flex;
+  justify-content: center;  /* NB.center essendo un valore "non numerico" la durata d'esecuzione sarà immediata, avessi usato uno spostamento con position, perciò con valori numerici, allora avrebbe rispettato la proprietà duraction di transition */  */
+}
+/* NB. se intendi spostare un oggetto con absolute devi dare una grandezza fissa al contenitore oltre che renderlo relativo */
+
+#esp1:hover .ex-8-img {
+  filter: grayscale(1) sepia(1);
+  border-radius: 50%;
+}
+
+
+.ex-9-img {
+  transition: 2s;
+}
+.ex-9-img:hover {
+  filter: invert(.5) sepia(1); /* invert .5 equivale a grey */
+  /* il fatto di mettere sepia dopo invert è DIFFERENTE dal metterlo prima, come già dimostrano img7 e 8 */
+  /* il filtro BLUR sembra non essere compatibile con gli altri filtri*/
+  transform: scale(1.2);
+  border-radius: 15px;
+}
+
+.ex-10-icon {
+  animation: mymove 2s linear infinite;
+}
+@keyframes mymove {
+  0% {
+   transform: rotate(360deg);
+  }
+
+}
+
+/*
+.ex-11-icon {
+  animation: mymove2 2s linear infinite alternate-reverse;
+}
+@keyframes mymove2 {
+  0% {
+   transform: rotate(270deg);
+  }
+}
+*/
+
+/* sarebbe interessante capire se si può influenzare la durata dell'animazione alternata */
+
+.ex-11-icon:hover {
+  animation: mymove2 2s linear infinite;
+}
+@keyframes mymove2 {
+  0% {
+   transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100%{
+   transform: rotate(0deg);
+  }
+}
+
+/* NB. analizzato il css di ex12/ex13-top/botton-white, sono div 60px x 10%, che partono rispettivamente centrati in altezza nei bordi orrizzontali a 10px dagli angoli opposti */
+
+
