@@ -113,10 +113,11 @@
 
 /* NB. analizzato il css di ex12/ex13-top/botton-white, sono div 60px x 10%, che partono rispettivamente centrati in altezza nei bordi orrizzontali a 10px dagli angoli opposti */
 
-.ex-12-top-white {
+
+.ex-12-button:hover .ex-12-top-white {
   animation: swing 2s linear infinite alternate;
 }
-.ex-12-bottom-white {
+.ex-12-button:hover .ex-12-bottom-white {
   animation: swing 2s linear infinite alternate-reverse;
 }
 
